@@ -14,7 +14,7 @@ La VLAN 30 (Visitantes) está bloqueada con permisos limitados usando ACLs.
 - ❌ Acceso a VLAN 40 (Servidores internos)
 - ❌ Acceso a dispositivos administrativos del Layer 3 Switch
 
-## 📝 Configuración de ACL (Access Control List)
+## Configuración de ACL (Access Control List)
 
 ### En el Layer 3 Switch:
 
@@ -40,7 +40,7 @@ access-list 102 deny ip 192.168.30.0 0.0.0.255 192.168.40.0 0.0.0.255
 access-list 102 permit ip any any
 ```
 
-## 📊 Matriz de Acceso
+## Matriz de Acceso
 
 | Origen | Destino | Permitido |
 |--------|---------|-----------|
@@ -50,12 +50,12 @@ access-list 102 permit ip any any
 | VLAN 20 (Tech) | VLAN 10 (Admin) | ✓ Sí |
 | VLAN 20 (Tech) | VLAN 30 (Guest) | ✓ Sí |
 | VLAN 20 (Tech) | VLAN 40 (Server) | ✓ Sí |
-| VLAN 30 (Guest) | VLAN 10 (Admin) | ❌ No |
-| VLAN 30 (Guest) | VLAN 20 (Tech) | ❌ No |
-| VLAN 30 (Guest) | VLAN 40 (Server) | ❌ No |
+| VLAN 30 (Guest) | VLAN 10 (Admin) | X No |
+| VLAN 30 (Guest) | VLAN 20 (Tech) | X No |
+| VLAN 30 (Guest) | VLAN 40 (Server) | X No |
 | VLAN 30 (Guest) | Internet (Router) | ✓ Sí |
 
-## 🧪 Pruebas de Conectividad
+## Pruebas de Conectividad
 
 ### ✅ Prueba 1: Inter-VLAN Routing (VLAN 30 → VLAN 20)
 
