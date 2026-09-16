@@ -2,7 +2,7 @@
 
 Simulación de una red con VLAN Trunking y Switch Virtual Interface (SVI) para inter-VLAN routing.
 
-## 🏗️ Topología
+##  Topología
 
 - 2 Switches Cisco 2960
 - 4 PCs (2 por VLAN)
@@ -10,7 +10,7 @@ Simulación de una red con VLAN Trunking y Switch Virtual Interface (SVI) para i
 - VLAN 10: Administración (192.168.10.0/24)
 - VLAN 20: Ventas (192.168.20.0/24)
 
-## ⚙️ Configuración
+##  Configuración
 
 ### Crear VLANs
 ```
@@ -49,13 +49,13 @@ interface vlan 20
  no shutdown
 ```
 
-## ✅ Resultados
+##  Resultados
 
 - ✓ Dispositivos en la misma VLAN se comunican directamente
 - ✓ Dispositivos en diferentes VLANs se comunican via SVI (inter-VLAN routing)
 - ✓ Todo configurado en CLI
 
-## 📚 Conceptos
+## Conceptos
 
 **VLAN:** Segmentación lógica de una red física  
 **Trunk:** Enlace que permite múltiples VLANs en un cable  
