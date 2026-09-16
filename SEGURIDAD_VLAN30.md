@@ -9,10 +9,10 @@ La VLAN 30 (Visitantes) está bloqueada con permisos limitados usando ACLs.
 - Acceso a servidores públicos (si existen)
 
 ### Bloqueado:
-- ❌ Acceso a VLAN 10 (Administración)
-- ❌ Acceso a VLAN 20 (Técnicos)
-- ❌ Acceso a VLAN 40 (Servidores internos)
-- ❌ Acceso a dispositivos administrativos del Layer 3 Switch
+- X Acceso a VLAN 10 (Administración)
+- X Acceso a VLAN 20 (Técnicos)
+- X Acceso a VLAN 40 (Servidores internos)
+- X Acceso a dispositivos administrativos del Layer 3 Switch
 
 ## Configuración de ACL (Access Control List)
 
@@ -57,7 +57,7 @@ access-list 102 permit ip any any
 
 ## Pruebas de Conectividad
 
-### ✅ Prueba 1: Inter-VLAN Routing (VLAN 30 → VLAN 20)
+### Prueba 1: Inter-VLAN Routing (VLAN 30 → VLAN 20)
 
 **Comando:** `ping 192.168.20.1` desde PC en VLAN 30
 
@@ -83,7 +83,7 @@ Ping statistics for 192.168.20.1:
 
 ---
 
-### ⚠️ Prueba 2: Acceso Restringido (VLAN 30 → VLAN 10 Admin)
+### Prueba 2: Acceso Restringido (VLAN 30 → VLAN 10 Admin)
 
 **Comando:** `ping 192.168.10.11` desde PC en VLAN 30
 
@@ -103,14 +103,14 @@ Ping statistics for 192.168.10.11:
     Minimum = 0ms, Maximum = 12ms, Average = 7ms
 ```
 
-**Resultado:** ⚠️ **Parcialmente Bloqueado**
+**Resultado:**  **Parcialmente Bloqueado**
 - El primer paquete se perdió (timeout)
 - Los siguientes paquetes pasaron parcialmente
 - Indica que hay ACL aplicada pero con cierto nivel de permeabilidad
 
 ---
 
-### ❌ Prueba 3: Bloqueo Total (VLAN 30 → VLAN 40 Servidor)
+###  Prueba 3: Bloqueo Total (VLAN 30 → VLAN 40 Servidor)
 
 **Comando:** `ping 192.168.40.1` desde PC en VLAN 30
 
@@ -135,7 +135,7 @@ Ping statistics for 192.168.40.1:
 
 ---
 
-### 📊 Resumen de Pruebas
+### Resumen de Pruebas
 
 | Prueba | Origen | Destino | Resultado | Esperado |
 |--------|--------|---------|-----------|----------|
@@ -143,7 +143,7 @@ Ping statistics for 192.168.40.1:
 | Acceso Restringido | VLAN 30 | VLAN 10 Admin | ⚠️ Parcial (25% pérdida) | ⚠️ Parcialmente |
 | Bloqueo Total | VLAN 30 | VLAN 40 Servidor | ❌ Bloqueado (100% pérdida) | ✅ Sí |
 
-## ✅ Resultado de Seguridad
+## Resultado de Seguridad
 
 - Los visitantes pueden usar Internet
 - Los visitantes NO pueden acceder a recursos administrativos o internos
