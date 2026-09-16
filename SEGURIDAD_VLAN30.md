@@ -140,7 +140,7 @@ Ping statistics for 192.168.40.1:
 | Prueba | Origen | Destino | Resultado | Esperado |
 |--------|--------|---------|-----------|----------|
 | Inter-VLAN Routing | VLAN 30 | VLAN 20 Gateway | ✅ Exitoso (0% pérdida) | ✅ Sí |
-| Acceso Restringido | VLAN 30 | VLAN 10 Admin | ⚠️ Parcial (25% pérdida) | ⚠️ Parcialmente |
+| Acceso Restringido | VLAN 30 | VLAN 10 Admin | ⚠️Parcial (25% pérdida) | ⚠️Parcialmente |
 | Bloqueo Total | VLAN 30 | VLAN 40 Servidor | ❌ Bloqueado (100% pérdida) | ✅ Sí |
 
 ## Resultado de Seguridad
