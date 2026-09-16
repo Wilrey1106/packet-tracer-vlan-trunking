@@ -1,0 +1,7 @@
+# Archivos temporales de Packet Tracer
+*.backup
+*.log
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
