@@ -43,3 +43,12 @@ ping 192.168.X.X            # Probar conectividad
 
 ## ¿Qué es 802.1Q?
 El estándar IEEE que define cómo etiquetar VLANs en ethernet.
+
+## ¿Cómo se bloquea la VLAN de Visitantes?
+Con ACLs (Access Control Lists). Se crean reglas que permiten/deniegan tráfico desde la VLAN 30 hacia otras VLANs, limitando permisos administrativos.
+
+## ¿Pueden los visitantes acceder a Internet pero no a la red interna?
+Sí, se configura con ACLs. Solo se permite tráfico hacia el router/Internet, pero no hacia otros dispositivos de la red.
+
+## ¿Por qué una VLAN para servidores?
+Para seguridad y gestión. El servidor está aislado en su propia VLAN, facilitando control de acceso y backup.
